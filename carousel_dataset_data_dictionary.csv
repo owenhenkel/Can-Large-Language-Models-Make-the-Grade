@@ -1,0 +1,18 @@
+﻿u_id,numeric,,uniquely identifies student
+q_id,numeric,,uniquely identifies question
+student_key_stage,string,categorical - 4 values,"string value of the key stage (grouping of grade levels) of the student answering the question; values can be KS1, KS2, KS3, KS4"
+question_difficulty,string,categorical - 2 values,"string value of the difficulty of the question relative to the grade level as estiamted by authors, values can be easy or hard"
+subject,string,categorical - 2 values,"subject domain of the question, values can be science or history"
+topic,string,text,"the topic of the question, this is roughly equivalent to a learning standards. There are various values for this field"
+question,string,text,text of question
+correct_answer,string,text,correct / ideal answer
+student_answer,string,text,text of student answer
+rater_1,string,categorical - 2 values,rater 1 judgement
+rater_2,string,categorical - 2 values,rater 2 judgement
+rater_3,string,categorical - 2 values,rater 3 judgement
+human_agree,numeric,binary value,wheter or not there was unanimous agreement between raters
+ground_truth,numeric,binary value,consensuse human rating
+fewshot-gpt-3.5-turbo-0125,numeric,binary value,model a prediction
+fewshot-gpt-4-0125-preview,numeric,binary value,model b prediction
+zeroshot-gpt-3.5-turbo-0125,numeric,binary value,model c prediction
+zeroshot-gpt-4-0125-preview,numeric,binary value,model d prediction
