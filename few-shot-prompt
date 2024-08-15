@@ -1,0 +1,31 @@
+Note : information in the brackets was pulled from the data file. 
+___________________________________________________________________
+
+prompt = [
+            {
+                "role": "system",
+                "content": f"""You are grading {student_age} year old students' responses to short answer-questions about {subject}, specifically {topic}.
+
+Students have been asked this question:  {question}.
+
+A correct answer to this question is: {correct_answer}
+
+Your task is to decide if the student’s answer is correct or wrong.
+
+A student answer is wrong if it misses a key part of the correct answer.
+
+If the student response is correct, you will respond OUTPUT = 1.
+If the student response is wrong, you will respond OUTPUT = 0.
+""",
+            }
+        ]
+
+        if few_shot:
+            prompt[0][
+                "content"
+            ] += f"""
+
+Here are examples of incorrect answers for this question:
+- {incorrect_1}
+- {incorrect_2}
+"""
